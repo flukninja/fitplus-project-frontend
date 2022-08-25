@@ -1,7 +1,7 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
-// import axios from "axios";
-import { instance } from "../api";
+import axios from "axios";
+// import { instance } from "../api";
 import { useDispatch } from "react-redux";
 import { authActions } from "../store";
 import { useNavigate } from "react-router-dom";
@@ -22,8 +22,8 @@ const Auth = () => {
         }));
     };
     const sendRequest = async (type = "login") => {
-        const res = await instance
-            .post(`/api/user/${type}`, {
+        const res = await axios
+            .post(`https://fitplus-backend.vercel.app/api/user/${type}`, {
                 name: inputs.name,
                 email: inputs.email,
                 password: inputs.password,

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-// import axios from "axios";
-import { instance } from "../api";
+import axios from "axios";
+// import { instance } from "../api";
 import Blog from "./Blog";
 const UserBlogs = () => {
     const [user, setUser] = useState();
     const id = localStorage.getItem("userId");
     const sendRequest = async () => {
-        const res = await instance
-            .get(`/api/blog/user/${id}`)
+        const res = await axios
+            .get(`https://fitplus-backend.vercel.app/api/blog/user/${id}`)
             .catch((err) => console.log(err));
         const data = await res.data;
         return data;

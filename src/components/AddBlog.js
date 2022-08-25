@@ -1,8 +1,8 @@
-// import axios from "axios";
+import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AddBlog.css";
-import { instance } from "../api";
+// import { instance } from "../api";
 
 const AddBlog = () => {
     const navigate = useNavigate();
@@ -20,8 +20,8 @@ const AddBlog = () => {
         }));
     };
     const sendRequest = async () => {
-        const res = await instance
-            .post("/api/blog/add", {
+        const res = await axios
+            .post("https://fitplus-backend.vercel.app/api/blog/add", {
                 activity: inputs.activity,
                 date: inputs.date,
                 duration: inputs.duration,

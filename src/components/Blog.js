@@ -3,8 +3,8 @@ import React from "react";
 import ModeEditOutlineIcon from "@mui/icons-material/ModeEditOutline";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { useNavigate } from "react-router-dom";
-// import axios from "axios";
-import { instance } from "../api";
+import axios from "axios";
+// import { instance } from "../api";
 import "./Blog.css";
 const Blog = ({ activity, date, duration, calories, userName, note, isUser, id }) => {
     const navigate = useNavigate();
@@ -12,8 +12,8 @@ const Blog = ({ activity, date, duration, calories, userName, note, isUser, id }
         navigate(`/myBlogs/${id}`);
     };
     const deleteRequest = async () => {
-        const res = await instance
-            .delete(`/api/blog/${id}`)
+        const res = await axios
+            .delete(`https://fitplus-backend.vercel.app/api/blog/${id}`)
             .catch((err) => console.log(err));
         const data = await res.data;
         return data;

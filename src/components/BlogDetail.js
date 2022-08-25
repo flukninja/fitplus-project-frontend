@@ -1,5 +1,5 @@
-import { instance } from "../api";
-// import axios from "axios";
+// import { instance } from "../api";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -16,8 +16,8 @@ const BlogDetail = () => {
         }));
     };
     const fetchDetails = async () => {
-        const res = await instance
-            .get(`/api/blog/${id}`)
+        const res = await axios
+            .get(`https://fitplus-backend.vercel.app/api/blog/${id}`)
             .catch((err) => console.log(err));
         const data = await res.data;
         return data;
@@ -35,8 +35,8 @@ const BlogDetail = () => {
         });
     }, [id]);
     const sendRequest = async () => {
-        const res = await instance
-            .put(`/api/blog/update/${id}`, {
+        const res = await axios
+            .put(`https://fitplus-backend.vercel.app/api/blog/update/${id}`, {
                 activity: inputs.activity,
                 date: inputs.date,
                 duration: inputs.duration,
