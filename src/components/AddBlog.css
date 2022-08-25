@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 0 20px;
+    padding: 20px;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    position: relative;
+}
+
+.form {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(13, 90, 167);
+    width: 30%;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input  {
+    display: block;
+    border: 2px solid #b0abab;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus{
+    outline:none
+}
+
+.form label {
+    font-size: 22px;
+}
+
+.select-activity {
+    width: 25%;
+    height: 35px;
+    border-radius: 5px;
+}
+
+#textarea {
+    border: 2px solid #b0abab;
+    border-radius: 8px;
+    width: 100%;   
+}
+
+.form button {
+    background: #E57737;
+    cursor: pointer;
+    color: #ffff;
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid #E57737;
+    border-radius: 8px;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+} 
+
+.allactivities {
+    background-color: rgb(255, 255, 255);
+}
+
+.list-tag{
+    display: flex;
+    padding: 20px;
+    list-style: none;
+}
+
+.list-tag li {
+    margin-right: 110px;
+}
+
+.all-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px #E57737 solid;
+    padding: 20px;
+    border-radius: 8px;
+
+}
