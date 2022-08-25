@@ -46,7 +46,7 @@ const Blog = ({ activity, date, duration, calories, userName, note, isUser, id }
                     </Typography>
                     <Typography sx={{ mb: 1.5 }}>Duration: {duration} minute</Typography>
                     <Typography sx={{ mb: 1.5 }} variant="body2">
-                        Calories: {calories} cal
+                        Calories: {calories} cals
                     </Typography>
                     <Typography sx={{ mb: 1.5 }} variant="body2">
                         Note: {note}

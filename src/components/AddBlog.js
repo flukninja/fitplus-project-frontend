@@ -58,7 +58,7 @@ const AddBlog = () => {
                             <option value="Running">Running</option>
                             <option value="Walking">Walking</option>
                             <option value="Situp">Sit-up</option>
-                            <option value="Situp">Weight-trainingt</option>
+                            <option value="Situp">Weight training</option>
                             <option value="Situp">Zumba</option>
                             <option value="Situp">Yoga</option>
                         </select>
@@ -69,6 +69,7 @@ const AddBlog = () => {
                             name="date"
                             type="date"
                             value={inputs.date}
+                            max={new Date().toISOString().split("T")[0]}
                             onChange={handleChange}
                         />
                     </div>
